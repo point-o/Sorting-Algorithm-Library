@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        #array-container {
+            display: flex;
+            align-items: flex-end;
+            height: 200px;
+            width: 80%;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        .bar {
+            display: inline-block;
+            margin: 0 2px;
+            background-color: #4caf50;
+            transition: background-color 0.3s, height 0.3s;
+        }
+
+        .bar:hover {
+            background-color: #45a049;
+        }
+
+        .button-container {
+            margin-bottom: 20px;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #007bff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:active {
+            background-color: #003d7a;
+        }
+
+        #randomize-button {
+            background-color: red;
+        }
+
+        #randomize-button:hover {
+            background-color: darkred;
+        }
+
+        #log-container {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 800px;
+            height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            padding: 10px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button id="randomize-button" onclick="genArray()">Randomize Array</button>
+        <button onclick="bogoSort(array)">Bogo Sort</button>
+        <button onclick="bubbleSort(array)">Bubble Sort</button>
+        <button onclick="gnomeSort(array)">Gnome Sort</button>
+        <button onclick="insertionSort(array)">Insertion Sort</button>
+        <button onclick="shellSort(array)">Shell Sort</button>
+        <button onclick="cocktail(array)">Cocktail Sort</button>
+        <button onclick="selection(array)">Selection Sort</button>
+    </div>
+    
+    <div id="array-container"></div>
+
+    <div id="log-container"></div>
+
+    <script src="messageLogger.js"></script>
+    <script src="arrayHandle.js"></script>
+    <script src="bubbleSort.js"></script>
+    <script src="bogoSort.js"></script>
+    <script src="gnomeSort.js"></script>
+    <script src="insertionSort.js"></script>
+    <script src="shellSort.js"></script>
+    <script src="cocktail.js"></script>
+    <script src="selection.js"></script>
+
+</body>
+</html>
