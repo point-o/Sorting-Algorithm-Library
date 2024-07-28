@@ -3,7 +3,7 @@ let array = [];
 let previousArray = [];
 
 function genArray() {
-    array = Array.from({ length: 100 }, () => Math.floor(Math.random() * 100));
+    array = Array.from({ length: 100 }, () => Math.floor(Math.random() * 200));
     createBars(array);
 }
 
